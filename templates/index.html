@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Fake News Detection</h2>
+    <form action="/predict" method="post">
+        <label for="title">Article Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="text">Text:</label><br>
+        <textarea id="text" name="text" rows="5" cols="40" required></textarea><br><br>
+        
+        <button type="submit">Classify</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
